@@ -21,7 +21,7 @@ jobs:
       run: npm install
 
     - name: Build
-      run: npm run build:prod
+      run: npm run build --omit=dev
 
     - name: Deploy
       if: success()
