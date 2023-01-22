@@ -19,6 +19,7 @@ body {
     font-family: var(--font-primary);
     font-weight: 300;
     color: var(--color-white-primary);
+    word-break: break-word;
 }
 
 h1, h2, h3, h4, h5 {
@@ -273,12 +274,13 @@ h2.section__title:before {
 }
 
 .hero__title {
-    font-size: 5.9375rem;
+    font-size: 5.7375rem;
     line-height: 5.625rem;
+    word-break: keep-all;
 }
 
 .hero__subtitle {
-    font-size: 2.97rem;
+    font-size: 2.77rem;
     line-height: 3.125rem;
 }
 
@@ -372,13 +374,13 @@ h2.section__title:before {
 
 .card {
     min-width: 287px;
-    height: 238px;
+    min-height: 220px;
     background-color: var(--color-dark-primary);
     border-radius: 30px;
     position: relative;
     padding-top: 30px;
     padding-right: 30px;
-    padding-bottom: 45px;
+    padding-bottom: 30px;
     text-align: right;
 }
 
@@ -403,7 +405,7 @@ h2.section__title:before {
 }
 
 .card__bottom-text {
-    font-size: 4.375rem;
+    font-size: 3.375rem;
     line-height: 4.125rem;
     font-weight: 500;
 }
@@ -435,7 +437,7 @@ h2.section__title:before {
 .card--small {
     min-width: 206px;
     max-width: 210px;
-    height: 193px;
+    min-height: 193px;
     padding-right: 24px;
     padding-top: 20px;
 }
@@ -500,6 +502,11 @@ h2.section__title:before {
     user-select: none;
 }
 
+.tns-horizontal.tns-subpixel>.tns-item {
+    display: inline-flex;
+    align-items: center;
+}
+
 /* links */
 
 .links__item {
@@ -552,6 +559,12 @@ h2.section__title:before {
 .logos-group img {
     max-width: 210px;
     filter: grayscale(1);
+}
+
+@media (max-width: 767px) {
+    .logos-group a:not(:last-child) {
+        margin-bottom: 15px;
+    }
 }
 
 /* footer */
