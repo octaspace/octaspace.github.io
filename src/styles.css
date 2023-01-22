@@ -419,7 +419,7 @@ h2.section__title:before {
 @media (max-width: 767px) {
     .card {
         min-width: 260px;
-        height: 220px;
+        min-height: 220px;
     }
     .card__top-text {
         font-size: 4rem;
@@ -450,6 +450,11 @@ h2.section__title:before {
     font-size: 2.5rem;
 }
 
+@media (max-width: 767px) {
+    .card--small {
+        min-height: 177px;
+    }
+}
 /* INFO */
 
 .info {
