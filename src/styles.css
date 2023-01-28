@@ -636,7 +636,7 @@ h2.section__title:before {
 }
 
 @media (max-width: 991px) {
-    
+
     .roadmap__item:after {
         top: -6px;
     }
@@ -644,7 +644,7 @@ h2.section__title:before {
     .roadmap__item:nth-child(even) {
         margin-left: unset;
     }
-    
+
     .roadmap__item:nth-child(even):after {
         left: 65px;
     }
