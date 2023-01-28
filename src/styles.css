@@ -572,6 +572,137 @@ h2.section__title:before {
     }
 }
 
+/* ROADMAP */
+
+.roadmap-container {
+    position: relative;
+    min-height: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.roadmap-container:after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 2px;
+    background-color: var(--color-accent-secondary);
+}
+
+@media (max-width: 991px) {
+    .roadmap-container:after {
+        left: 70px;
+        transform: unset;
+    }
+}
+
+.roadmap__item {
+    position: relative;
+}
+
+.roadmap__item:not(:first-child) {
+    margin-top: 30px;
+}
+
+.roadmap__item:nth-child(even) {
+    margin-left: auto;
+}
+
+.roadmap__item:nth-child(even):after {
+    left: -6px;
+}
+
+.roadmap__item:nth-child(odd) {
+    margin-right: 50%;
+}
+
+.roadmap__item:nth-child(odd):after {
+    right: -6px;
+}
+
+.roadmap__item:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 32px;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    background-color: var(--color-accent-third);
+}
+
+@media (max-width: 991px) {
+    
+    .roadmap__item:after {
+        top: -6px;
+    }
+
+    .roadmap__item:nth-child(even) {
+        margin-left: unset;
+    }
+    
+    .roadmap__item:nth-child(even):after {
+        left: 65px;
+    }
+
+    .roadmap__item:nth-child(odd) {
+        margin-right: unset;
+    }
+
+    .roadmap__item:nth-child(odd):after {
+        left: 65px;
+        right: unset;
+    }
+
+}
+
+.roadmap__card {
+    position: relative;
+    z-index: 1;
+}
+
+.roadmap__card > *:last-child {
+    margin-bottom: 0;
+}
+
+.roadmap__card.card {
+    padding-left: 30px;
+    text-align: left;
+    min-height: unset;
+}
+
+.roadmap__title {
+    margin-bottom: 16px;
+}
+
+.roadmap__title + * {
+    margin-left: 12px;
+}
+
+.roadmap__title + ul {
+    padding-left: 1em;
+}
+
+.roadmap__title.check--done {
+    position: relative;
+}
+
+.roadmap__title.check--done:after {
+    content: '';
+    display: inline-block;
+    background-image: url('assets/img/icons/check.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    vertical-align: top;
+    margin-left: 20px;
+}
+
 /* footer */
 
 footer {
