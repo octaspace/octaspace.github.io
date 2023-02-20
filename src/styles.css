@@ -233,6 +233,17 @@ h2.section__title:before {
     opacity: 0;
 }
 
+@media (max-width: 991px) {
+    .navbar__menu {
+        position: absolute;
+        width: 100%;
+        top: 90px;
+        padding-bottom: 20px;
+        left: 0px;
+        background: var(--gradient-dark);
+    }
+}
+
 .nav-link {
     position: relative;
     font-family: var(--font-secondary);
