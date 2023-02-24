@@ -698,19 +698,26 @@ h2.section__title:before {
     padding-left: 1em;
 }
 
-.roadmap__title.check--done {
+.check--done {
     position: relative;
 }
 
-.roadmap__title.check--done:after {
+.check--done:after {
     content: '';
     display: inline-block;
     background-image: url('assets/img/icons/check.svg');
     background-size: contain;
     background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-top: -3px;
+}
+
+.roadmap__title.check--done:after {
     height: 25px;
     width: 25px;
-    vertical-align: top;
     margin-left: 20px;
 }
 
