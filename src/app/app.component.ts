@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
   //title = 'octaspace';
 
   network: any;
+  currentYear = new Date().getFullYear();
 
   constructor(private networkService: NetworkService) { }
 
