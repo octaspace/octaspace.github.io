@@ -319,6 +319,7 @@ h2.section__title:before {
 
 @media (max-width: 991px) {
     .hero__img svg {
+        display: none;
         opacity: .5;
         top: unset;
         transform: translateY(-85%);
@@ -574,10 +575,11 @@ h2.section__title:before {
 
 .logos-group img {
     max-width: 210px;
+    max-height: 50px;
     filter: grayscale(1);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .logos-group a:not(:last-child) {
         margin-bottom: 15px;
     }
