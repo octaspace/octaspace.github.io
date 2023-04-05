@@ -585,6 +585,10 @@ h2.section__title:before {
     }
 }
 
+.logos-group--xl a:not(:last-child) {
+    margin-bottom: 15px;
+}
+
 /* ROADMAP */
 
 .roadmap-container {
