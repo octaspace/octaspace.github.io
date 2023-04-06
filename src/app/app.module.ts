@@ -8,6 +8,8 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import { AppComponent } from './app.component';
 import { RoadmapComponent } from './components/roadmap/roadmap.component';
 
+import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { RoadmapComponent } from './components/roadmap/roadmap.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AngularSvgIconModule.forRoot()
+    AngularSvgIconModule.forRoot(),
+    NgxGoogleAnalyticsModule.forRoot('G-L4QY0PV54P')
   ],
   providers: [],
   bootstrap: [AppComponent]
