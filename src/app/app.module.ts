@@ -9,11 +9,13 @@ import { AppComponent } from './app.component';
 import { RoadmapComponent } from './components/roadmap/roadmap.component';
 
 import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
+import { TeamComponent } from './components/team/team.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RoadmapComponent
+    RoadmapComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,

@@ -742,10 +742,8 @@ h2.section__title:before {
     display: inline-block;
 }
 
-@media (max-width: 991px) {
-    .member:not(:last-child) {
-        margin-bottom: 30px;
-    }
+.member:not(:last-child) {
+  margin-bottom: 60px;
 }
 
 /* footer */
