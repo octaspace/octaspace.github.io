@@ -727,6 +727,27 @@ h2.section__title:before {
     margin-left: 20px;
 }
 
+/* team */
+
+.member__img img {
+    width: 100%;
+    max-width: 180px;
+}
+
+.member__links a:not(:last-child) {
+    margin-right: 18px;
+}
+
+.member__links a {
+    display: inline-block;
+}
+
+@media (max-width: 991px) {
+    .member:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
 /* footer */
 
 footer {
