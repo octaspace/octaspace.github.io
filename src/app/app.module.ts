@@ -10,12 +10,14 @@ import { RoadmapComponent } from './components/roadmap/roadmap.component';
 
 import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
 import { TeamComponent } from './components/team/team.component';
+import { PartnersComponent } from './components/partners/partners.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoadmapComponent,
-    TeamComponent
+    TeamComponent,
+    PartnersComponent
   ],
   imports: [
     BrowserModule,
