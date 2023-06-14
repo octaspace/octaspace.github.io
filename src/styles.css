@@ -32,6 +32,10 @@ h1, h2, h3, h4, h5 {
     overflow-x: clip;
 }
 
+.filter--grayscale {
+    filter: grayscale(1);
+}
+
 /* colors */
 
 .bg-gradient--dark {
@@ -571,6 +575,17 @@ h2.section__title:before {
     transition: .3s all;
 }
 
+
+.links__item img {
+    max-width: 60px;
+    margin-right: 10px;
+}
+
+@media (max-width: 420px) {
+    .links__item img {
+        margin-bottom: 15px;
+    }
+}
 /* LOGOS */
 
 .logos-group img {
