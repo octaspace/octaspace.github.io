@@ -1,7 +1,6 @@
 window.addEventListener('load', function () {
 
     // scroll spy and start animation
-
     setTimeout( () => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -29,35 +28,36 @@ window.addEventListener('load', function () {
     }, 500);
 
     // country-slider
-    var slider = tns({
-        container: '.country-slider',
-        slideBy: 2,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        mouseDrag: true,
-        autoWidth: true,
-        controls: false,
-        nav: false,
-        loop: true,
-        rewind: false,
-        autoplayButtonOutput: false,
-        autoplayResetOnVisibility: false,
-        gutter: 20,
-        responsive: {
-            350: {
-              items: 3,
-            },
-            500: {
-              items: 4
-            },
-            1024: {
-                items: 5
-            },
-            1280: {
-                items: 6
-            }
-          },
-    });
+    setTimeout( () => {
+        var slider = tns({
+            container: '.country-slider',
+            slideBy: 2,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            mouseDrag: true,
+            autoWidth: true,
+            controls: false,
+            loop: false,
+            nav: false,
+            autoplayButtonOutput: false,
+            autoplayResetOnVisibility: false,
+            gutter: 20,
+            responsive: {
+                350: {
+                  items: 3,
+                },
+                500: {
+                  items: 4
+                },
+                1024: {
+                    items: 5
+                },
+                1280: {
+                    items: 6
+                }
+              },
+        });
+    }, 500)
 
 })
 
