@@ -74,7 +74,7 @@ Secure your data with our VPN services and enjoy effortless file storage.
             </div>
         </div>
     </section>
-
+    
     <app-roadmap></app-roadmap>
 
     <section class="pt-60 pb-60">
@@ -184,7 +184,6 @@ These services encompass a wide spectrum of capabilities, including but not limi
               <p class="mt-4">PyTorch</p>
             </div>
           </div>
-          
         </div>
       </div>
     </section>
@@ -263,30 +262,73 @@ This blockchain employs a dual-chain system, combining Proof-of-Work (PoW) and P
             </div>
           </div>
         </div>
+        <section class="pt-60 pb-60">
+          <div class="container">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="main-container">
+                    <div class="glass mt-8">
+                        <img src="assets/img/render.png" alt="" class="render">
+                    </div>
+                    <div class="bottom-right-panel">
+                      <img src="assets/img/addon.png" alt="" class="render">
+                    </div>
+                </div>
+                
+                
+                </div>
+                  <div class="col-lg-6 mb-4">
+                      <h1 class="section__title mb-30 fw-bold">rendering</h1>
+                      <p class="section__text mb-45 color-gray">
+                          OctaSpace provides rendering services along with its other offerings. Rendering scenes using Blender is one of the capabilities available to users. Utilize distributed computing power to achieve high-quality renders.
+                      </p>
+                      <a href="http://34.147.146.4/" class="btn-primary">Render Portal</a>
+                      &nbsp;
+                      <a href="http://34.147.146.4/" class="btn-primary">Documentation</a>
+                  </div>
+                  
+              </div>
+          </div>
+      </section>
+
         <div class="row align-items-end mb-45 comet-holder">
           <div class="col-lg-6">
             <h1 class="section__title fw-bold mb-36">vpn</h1>
             <ul class="section__text color-gray">
               <li>Setting up the VPN is made easy with non-modified and open-source software available for multiple platforms</li>
               <li>Enjoy the freedom to choose the VPN technology that best suits your needs, whether it's Wireguard, Shadowsocks, or OpenVPN</li>
+              <li>Multi-platform bespoke VPN apps, ranging from browser extensions to mobile applications.</li>
               <li>Connect multiple devices simultaneously with no limitations</li>
               <li>Embrace a flexible payment model as you go, based on the amount of data used, billed per GB</li>
             </ul>
           </div>
-
           <img src="assets/img/comet.png" alt="" class="comet">
-          
           <div class="col-xl-2 col-lg-3 d-lg-block d-flex justify-content-center">
-            <div class="card card--small">
-              <div class="card__icon">
-                <img src="assets/img/icons/vpn.png" alt="">
+            <div class="phone-slideshow">
+              <div class="screen-mask">
+                <ul class="phone-slideshow-list">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
               </div>
-              <div class="card__top-text">
-                {{ network.nodes.vpn }}
-              </div>
-              <div class="card__bottom-text">
-                VPN AP
-              </div>
+            </div>
+          </div>
+          <div class="card card--small">
+            <div class="card__icon">
+              <img src="assets/img/icons/vpn.png" alt="">
+            </div>
+            <div class="card__top-text">
+              {{ network.nodes.vpn }}
+            </div>
+            <div class="card__bottom-text">
+              VPN AP
             </div>
           </div>
         </div>
@@ -294,8 +336,73 @@ This blockchain employs a dual-chain system, combining Proof-of-Work (PoW) and P
           <div class="col-lg-6">
             <h2 class="section__title mb-36">available locations</h2>
           </div>
+          <div class="row">
+            <div class="col-md-6">
+              <app-globe></app-globe>
+            </div>
+            <div class="col-md-6">
+              <!-- Content for the right column -->
+              <div class="row">
+              <div class="mb-2">
+                <h3 class="section__title mb-2">mobile</h3>
+                <a href="https://play.google.com/store/apps/details?id=com.octaspace.octavpn" class="download android" target="_blank">
+                  <i class="fa fa-brands fa-google-play fa-2x"></i>
+                  <span class="df">Download from</span>
+                  <span class="dfn">Google Play</span>
+                </a>
+          
+                <a href="https://www.apple.com/app-store/" class="download apple" target="_blank">
+                  <i class="fa fa-brands fa-apple fa-2x"></i>
+                  <span class="df">Download from</span>
+                  <span class="dfn">App Store</span>
+                </a>
+              </div>
+            </div>
+              <div class="row">
+              <div>
+                <h3 class="section__title mb-2">browser extensions</h3>
+                <a href="https://microsoftedge.microsoft.com/addons/detail/octa-vpn/dbogjddpccpiaffjjdlgkohnfgbekjde " class="download windows" target="_blank">
+                  <i class="fa fa-brands fa-windows fa-2x"></i>
+                  <span class="df">Download from</span>
+                  <span class="dfn">Microsoft Store</span>
+                </a>
+          
+                <a href="https://addons.mozilla.org/en-US/firefox/addon/octa-vpn/" class="download firefox" target="_blank">
+                  <i class="fa fa-brands fa-firefox fa-2x"></i>
+                  <span class="df">Download from</span>
+                  <span class="dfn">Firefox Store</span>
+                </a>
+          
+                <a href="https://chromewebstore.google.com/detail/octa-vpn/mihegdmkfdnnnhnjffkbaodhfpcejjbl " class="download google" target="_blank">
+                  <i class="fa fa-brands fa-chrome fa-2x"></i>
+                  <span class="df">Download from</span>
+                  <span class="dfn">Chrome Store</span>
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-2">
+                <h3 class="section__title mb-2">desktop</h3>
+                <div class="col-12 d-flex justify-content-start align-items-center flex-wrap logos-group2">
+                  <a href="https://docs.octa.space/vpn" class="me-5">
+                    <img src="assets/img/wireguard.png" alt="wireguard">
+                  </a>
+                  <a href="https://docs.octa.space/vpn" class="me-5">
+                    <img src="assets/img/openvpn_logo.png" alt="coinmetro">
+                  </a>
+                  <a href="https://docs.octa.space/vpn" class="me-5">
+                    <img src="assets/img/v2ray.png" alt="coinex">
+                  </a>
+                </div>
+              </div>
+            </div>
+            </div>
+            
+          </div>
           <div class="col-12">
+            
             <div class="country-slider">
+              
               <div><img src="assets/img/flags/argentina.png" alt=""><span class="fs-6 fw-semibold ms-3 d-inline-block align-bottom">Argentina</span></div>
               <div><img src="assets/img/flags/canada.png" alt=""><span class="fs-6 fw-semibold ms-3 d-inline-block align-bottom">Canada</span></div>
               <div><img src="assets/img/flags/china.png" alt=""><span class="fs-6 fw-semibold ms-3 d-inline-block align-bottom">China</span></div>
@@ -308,7 +415,9 @@ This blockchain employs a dual-chain system, combining Proof-of-Work (PoW) and P
               <div><img src="assets/img/flags/vietnam.png" alt=""><span class="fs-6 fw-semibold ms-3 d-inline-block align-bottom">Vietnam</span></div>
               <div><img src="assets/img/flags/australia.png" alt=""><span class="fs-6 fw-semibold ms-3 d-inline-block align-bottom">Australia</span></div>
             </div>
+            
           </div>
+          
         </div>
       </div>
     </section>
@@ -359,6 +468,9 @@ This blockchain employs a dual-chain system, combining Proof-of-Work (PoW) and P
             <a href="https://www.mexc.com/exchange/OCTA_USDT" class="me-5">
               <img src="assets/img/logos/mexc.svg" alt="mexc">
             </a>
+            <a href="https://go.coinmetro.com/exchange/octa-usdt" class="me-5">
+              <img src="assets/img/logos/cm.png" alt="coinmetro">
+            </a>
             <a href="https://www.coinex.com/exchange/OCTA-USDT" class="me-5">
               <img src="assets/img/logos/coinex.png" alt="coinex">
             </a>
@@ -400,6 +512,7 @@ This blockchain employs a dual-chain system, combining Proof-of-Work (PoW) and P
 
       </div>
     </section>
+    
 
     <app-partners></app-partners>
 
