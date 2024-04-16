@@ -69,7 +69,7 @@ export class GlobeComponent implements OnInit, OnDestroy {
   private render(): void {
     this.ctx.clearRect(0, 0, this.width, this.height);
 
-    this.rotation += 0.0004;
+    this.rotation += 0.005;
     const sineRotation = Math.sin(this.rotation);
     const cosineRotation = Math.cos(this.rotation);
 
