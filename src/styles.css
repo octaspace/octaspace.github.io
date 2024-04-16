@@ -430,6 +430,7 @@ h3.section__title:before {
     line-height: 1.5;
 }
 
+
 .card__bottom-text {
     font-size: 3.375rem;
     line-height: 4.125rem;
@@ -995,7 +996,7 @@ footer:before {
 .bottom-right-panel {
     position: absolute;
     bottom: -30px; /* Adjust to control vertical positioning */
-    right: -20px; /* Adjust to control horizontal positioning */
+    right: -10px; /* Adjust to control horizontal positioning */
     width: 33%; /* Width of the bottom right panel */
     max-width: 200px; /* Maximum width of the panel */
     padding: 0; /* Remove internal padding */
@@ -1184,6 +1185,7 @@ footer:before {
     cursor: pointer;
     margin-bottom: 10px; /* Add margin between buttons */
     margin-right: 20px; /* Add horizontal margin between buttons */
+    text-decoration: none; /* Remove underline from anchor */
   }
   
   .download > .fa {
@@ -1210,8 +1212,81 @@ footer:before {
     font-size: 1.08em;
   }
   
+  /* Prevent hover effects on text and icons */
   .download:hover {
-    -webkit-filter: invert(100%);
-    filter: invert(100%);
+    color: #fff; /* Maintain text color */
+    background: #151924; /* Maintain background color */
+    text-decoration: none; /* Remove underline on hover */
   }
   
+  /* Override default link styles for anchor within .download */
+  .download a {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  /* Override hover styles for anchor within .download */
+  .download a:hover {
+    color: inherit; /* Maintain text color on hover */
+    text-decoration: none; /* Remove underline on hover */
+  }
+  
+.clients {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px; /* Adjust the gap between logo items */
+    margin-top: 0;
+    padding: 0;
+    max-width: 1024px;
+    margin: 0 auto 4.8rem; /* Adjust the bottom margin */ }
+
+.clients li {
+  list-style: none;
+  margin: 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.clients img {
+  height: 3.2rem;
+
+}
+.clients:hover li {
+filter: blur(0px);
+-webkit-filter: blur(0px);
+}
+.clients:hover li:not(:hover)  {
+filter: blur(2px);
+-webkit-filter: blur(2px);
+}
+.clients li:hover {
+-webkit-transform: translateY(-0.3rem);
+transform: translateY(-0.3rem); 
+}
+
+@media (min-width: 1024px) {
+.clients {
+    grid-template-columns: auto auto auto auto; }
+    
+.clients img {
+  height: 2.5rem; }}
+
+/* --- Images (gray logo) --- */
+.clients img {
+
+    max-height: 30px;
+  -webkit-filter: grayscale(100%) brightness(10%) contrast(10%);
+          filter: grayscale(100%) brightness(10%) contrast(10%); }
+
+.clients img:hover {
+  background: none;
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+
+  @media (max-width: 768px) {
+    .clients .list-inline-item {
+      margin-right: 10px; /* Reduce spacing between logo items on smaller screens */
+    }
+  }

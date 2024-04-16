@@ -12,6 +12,7 @@ import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
 import { TeamComponent } from './components/team/team.component';
 import { PartnersComponent } from './components/partners/partners.component';
 import { GlobeComponent } from './globe/globe.component';
+import { NumcountComponent } from './numcount/numcount.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { GlobeComponent } from './globe/globe.component';
     TeamComponent,
     PartnersComponent,
     GlobeComponent,
+    NumcountComponent,
   ],
   imports: [
     BrowserModule,
