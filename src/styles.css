@@ -1231,62 +1231,52 @@ footer:before {
     text-decoration: none; /* Remove underline on hover */
   }
   
-.clients {
+  .clients {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 100px; /* Adjust the gap between logo items */
+    justify-content: space-around;
+    align-items: center;
     margin-top: 0;
     padding: 0;
     max-width: 1024px;
-    margin: 0 auto 4.8rem; /* Adjust the bottom margin */ }
-
-.clients li {
-  list-style: none;
-  margin: 0;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-.clients img {
-  height: 3.2rem;
-
-}
-.clients:hover li {
-filter: blur(0px);
--webkit-filter: blur(0px);
-}
-.clients:hover li:not(:hover)  {
-filter: blur(2px);
--webkit-filter: blur(2px);
-}
-.clients li:hover {
--webkit-transform: translateY(-0.3rem);
-transform: translateY(-0.3rem); 
-}
-
-@media (min-width: 1024px) {
-.clients {
-    grid-template-columns: auto auto auto auto; }
-    
-.clients img {
-  height: 2.5rem; }}
-
-/* --- Images (gray logo) --- */
-.clients img {
-
+    margin: 0 auto 4.8rem;
+  }
+  
+  .logo-container {
+    flex: 1 0 200px; /* Allow logo containers to grow and shrink with a max-width */
+    text-align: center; /* Center-align the logo within the container */
+    margin: 10px; /* Adjust margin around each logo container */
+  }
+  
+  .clients .logo-link {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  .clients img {
+    height: 3.2rem;
     max-height: 30px;
-  -webkit-filter: grayscale(100%) brightness(10%) contrast(10%);
-          filter: grayscale(100%) brightness(10%) contrast(10%); }
-
-.clients img:hover {
-  background: none;
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out; }
-
-  @media (max-width: 768px) {
-    .clients .list-inline-item {
-      margin-right: 10px; /* Reduce spacing between logo items on smaller screens */
+    -webkit-filter: grayscale(100%) brightness(10%) contrast(10%);
+    filter: grayscale(100%) brightness(10%) contrast(10%);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .clients img:hover {
+    -webkit-transform: translateY(-0.3rem);
+    transform: translateY(-0.3rem);
+    filter: grayscale(0%);
+  }
+  
+  @media (min-width: 768px) {
+    .clients {
+      justify-content: flex-start; /* Align logos to the start of the row */
+    }
+  
+    .logo-container {
+      flex-basis: 25%; /* Set the width of each logo container to 25% */
+      max-width: none; /* Remove max-width for larger screens */
+      margin: 20px 0; /* Adjust vertical margin between logo rows */
     }
   }
+  
