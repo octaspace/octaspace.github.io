@@ -241,6 +241,7 @@ h3.section__title:before {
 
 .navbar-toggler,
 .navbar-toggler:focus {
+    z-index: 1000;
     border: 0;
     outline: 0;
     box-shadow: none;
@@ -269,6 +270,7 @@ h3.section__title:before {
         padding-bottom: 20px;
         left: 0px;
         background: var(--gradient-dark);
+        z-index: 999;
     }
 }
 
@@ -356,10 +358,10 @@ h3.section__title:before {
 
 @media (max-width: 991px) {
     .hero__img svg {
-        display: none;
+
         opacity: .5;
         top: unset;
-        transform: translateY(-85%);
+        margin-top: 60%;
         z-index: -1;
         right: 0;
     }
