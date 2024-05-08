@@ -10,27 +10,32 @@ export class NumcountComponent implements OnInit {
   constructor(private el: ElementRef) { }
 
   ngOnInit(): void {
-    this.counter('.counter1', 2); // Adjust the duration for faster animation
+    this.counter('.counter1', 2);
     this.counter('.counter2', 3);
     this.counter('.counter3', 4);
-    this.counter('.counter4', 2);
   }
 
   private counter(className: string, duration: number): void {
     const target = this.el.nativeElement.querySelector(className);
+
+    if (!target) {
+      console.error(`Element with class '${className}' not found.`);
+      return;
+    }
+
     const end = parseInt(target.getAttribute('data-target') || '0', 10);
     let current = 0;
 
     const interval = setInterval(() => {
       if (current < end) {
-        current += Math.ceil((end - current) / (duration * 10)); // Adjust increment for faster animation
-        target.innerText = this.formatNumberWithCommas(current); // Format with commas
+        current += Math.ceil((end - current) / (duration * 10));
+        target.innerText = this.formatNumberWithCommas(current);
       }
       if (current >= end) {
         clearInterval(interval);
-        target.innerText = this.formatNumberWithCommas(end); // Ensure final value is displayed accurately with commas
+        target.innerText = this.formatNumberWithCommas(end);
       }
-    }, 50); // Decreased interval time for faster animation
+    }, 50);
   }
 
   private formatNumberWithCommas(number: number): string {

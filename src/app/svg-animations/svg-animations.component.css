@@ -1,0 +1,51 @@
+/* svg-animations.component.css */
+
+html,
+body {
+  height: 100%;
+  background: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+#main {
+    position: relative;
+    height: 30vh; /* Set the height of the main container */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align content to the bottom */
+  }
+  
+  svg {
+    max-height: calc(50vh - 100px); /* Adjust based on your footer height and desired spacing */
+    width: auto;
+  }
+  
+
+.illustration {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 2em;
+  font-size: 0.75em;
+  font-weight: 200;
+  color: #C31A98;
+}
+
+footer a {
+  color: inherit;
+}

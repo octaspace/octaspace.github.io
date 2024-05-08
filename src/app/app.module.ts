@@ -13,6 +13,8 @@ import { TeamComponent } from './components/team/team.component';
 import { PartnersComponent } from './components/partners/partners.component';
 import { GlobeComponent } from './globe/globe.component';
 import { NumcountComponent } from './numcount/numcount.component';
+import { SvgAnimationsComponent } from './svg-animations/svg-animations.component';
+import { TestimonialSliderComponent } from './testimonial-slider/testimonial-slider.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { NumcountComponent } from './numcount/numcount.component';
     PartnersComponent,
     GlobeComponent,
     NumcountComponent,
+    SvgAnimationsComponent,
+    TestimonialSliderComponent,
   ],
   imports: [
     BrowserModule,

@@ -23,6 +23,7 @@
     "d3": "^7.9.0",
     "d3-geo": "^3.1.1",
     "ngx-google-analytics": "^14.0.1",
+    "particles.js": "^2.0.0",
     "rxjs": "~7.5.0",
     "t3-rs-geo": "^0.7.1",
     "three": "^0.163.0",

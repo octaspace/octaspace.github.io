@@ -104,6 +104,20 @@ h1, h2, h3, h4, h5 {
     margin-top: 30px;
 }
 
+.mt-60 {
+    margin-top: 60px;
+}
+.mt-80 {
+    margin-top: 80px;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+.mt-160 {
+    margin-top: 160px;
+}
+
 .mb-45 {
     margin-bottom: 45px;
 }
@@ -293,10 +307,13 @@ h3.section__title:before {
 }
 
 /* HERO */
-
 .hero {
-   overflow-x: clip;
+    overflow-x: clip;
 }
+.mb-30 { /* Adjusted bottom margin for the header */
+    margin-bottom: 15px; /* Adjusted bottom margin */
+}
+
 
 .hero__title {
     font-size: 5.7375rem;
@@ -312,6 +329,7 @@ h3.section__title:before {
 .hero__text {
     font-size: 1rem;
     line-height: 1.25rem;
+    margin-bottom: 2rem; /* Adjusted bottom margin */
 }
 
 .hero__img {
@@ -320,14 +338,19 @@ h3.section__title:before {
 
 .hero__img svg {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: -20%;
+
 }
+
+/* Ensure text appears above the image */
+.hero__content {
+    position: relative;
+    z-index: 1; /* Higher z-index than the image */
+}
+
 
 @media (min-width: 992px) {
     .hero .container .row .hero__height {
-        min-height: 725px;
+        min-height: 605px;
     }
 }
 
@@ -978,13 +1001,21 @@ footer:before {
 
 .glass {
     background: rgba(255, 255, 255, 0.1);
-    -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    -webkit-box-shadow: 0 8px 32px 0 rgba(135, 31, 126, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(211, 5, 201, 0.37);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, 0.4);
     padding: 0; /* Remove internal padding */
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass p {
+    margin-top: 4px;
 }
 
 .render {
@@ -992,6 +1023,52 @@ footer:before {
     height: auto;
     border-radius: 8px;
 }
+
+.render.mask {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.glass-transparent {
+
+    border-radius: 2px;
+
+    padding: 0; /* Remove internal padding */
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.glass-transparent p {
+    margin-top: 4px;
+}
+
+.glass-transparent::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Adjust as needed */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+}
+
+.image-transparent {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+
 
 .bottom-right-panel {
     position: absolute;
@@ -1279,4 +1356,73 @@ footer:before {
       margin: 20px 0; /* Adjust vertical margin between logo rows */
     }
   }
+  
+  .background-with-svg {
+    /* Position the element relative to its parent */
+    position: relative;
+  }
+  
+  .background-with-svg::before {
+    /* Content for the pseudo-element */
+    content: '';
+    /* Position the pseudo-element behind other content */
+    z-index: -1;
+    /* Position the pseudo-element to cover the entire container */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Apply the background image */
+    background-image: url('assets/img/binary.png');
+    /* Set background size to cover the entire container */
+    background-size: cover;
+    /* Position the background at the center */
+    background-position: center;
+    /* Adjust the opacity of the background image */
+    opacity: 0.2; /* Adjust the opacity value (0.5 for 50% opacity) */
+  }
+  
+  /* Optional: Center content vertically and horizontally */
+  .background-with-svg .col-lg-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .fbands {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px; /* Adjust padding as needed */
+  }
+  
+  .customer-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust minmax values as needed */
+    grid-gap: 20px;
+    justify-items: center; /* Center items horizontally within each grid cell */
+    align-items: center; /* Center items vertically within the grid container */
+  }
+  
+  .customer-logos .slide {
+    text-align: center;
+  }
+  
+  .customer-logos .slide img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .customer-logos {
+      grid-template-columns: repeat(3, minmax(120px, 1fr)); /* Adjust the number of columns for smaller screens */
+    }
+  }
+  
+  @media only screen and (min-width: 801px) {
+    .customer-logos {
+      grid-template-columns: repeat(7, minmax(120px, 1fr)); /* Adjust the number of columns for larger screens */
+    }
+  }
+  
   

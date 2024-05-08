@@ -1,0 +1,135 @@
+.testimonials-container {
+    color: #fff;
+    background: linear-gradient(90deg, #161A26 0%, #040207 101.09%);
+    box-shadow: 0 0px 20px 0 rgba(211, 5, 201, 0.37);
+    width: 100%; /* Updated to full width */
+    margin: 20px auto;
+    padding: 50px 80px;
+    border-radius: 15px;
+    position: relative;
+  }
+  
+  .testimonial {
+    line-height: 28px;
+    text-align: justify;
+    margin-bottom: 10px; /* Adjusted margin here */
+}
+
+.centered-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjusted alignment here */
+}
+
+.logo {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.user-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.user-info {
+    margin-right: auto; /* Pushes user info to the left */
+}
+
+.username {
+    margin: 0;
+}
+
+.role {
+    font-weight: normal;
+    margin: 2px 0;
+}
+
+.service-label {
+    font-weight: bold;
+    text-align: center; /* Center the text */
+    margin-left: auto;
+    padding: 5px 10px;
+    border-radius: 10px; /* Rounded edges */
+    display: inline-block;
+}
+
+.service-label-octarender,
+.service-label-vpn,
+.service-label-compute,
+.service-label-ai {
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-left: auto;
+}
+
+.service-label-octarender {
+    background-color: #6F158D;
+}
+
+.service-label-vpn {
+    background-color: #3F51B5;
+}
+
+.service-label-compute {
+    background-color: #4CAF50;
+}
+
+.service-label-ai {
+    background-color: #FF9800;
+}
+
+.progress-bar {
+    background: #6F158D;
+    width: 100%;
+    height: 4px;
+    animation: grow 5s linear infinite;
+    transform-origin: left;
+    margin-bottom: 20px;
+}
+
+@keyframes grow {
+    from {
+        transform: scaleX(0);
+    }
+}
+
+.fa-quote {
+    position: absolute;
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.4);
+    top: 80px;
+}
+
+.fa-quote-left {
+    left: 40px;
+}
+
+.fa-quote-right {
+    right: 40px;
+}
+
+@media (max-width: 768px) {
+    .testimonials-container {
+        padding: 20px 20px;
+        font-size: 16px;
+    }
+
+    .fa-quote {
+        display: none;
+    }
+}
+
+@media (max-width: 376px) {
+    .testimonial {
+        line-height: 10px;
+        margin: 10px auto;
+    }
+}

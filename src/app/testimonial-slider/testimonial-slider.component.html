@@ -1,0 +1,20 @@
+<div class="testimonials-container">
+    <i class="fa fa-quote-right fa-quote"></i>
+    <i class="fa fa-quote-left fa-quote"></i>
+    <div class="progress-bar"></div>
+    
+    <div class="user-details">
+      <img [src]="currentTestimonial.photo" alt="logo" class="logo">
+      <div class="user-info">
+        <h4 class="username">{{ currentTestimonial.name }}</h4>
+        <p class="role">{{ currentTestimonial.position }}</p>
+        <span *ngIf="currentTestimonial.twitter" class="twitter-handle">{{ currentTestimonial.twitter }}</span> <!-- Display Twitter handle if available -->
+      </div>
+      <span class="service-label" [ngClass]="getServiceLabelClass(currentTestimonial.service)">
+        {{ currentTestimonial.service }}
+      </span> <!-- Add the service label here -->
+    </div>
+  
+    <p class="testimonial" [innerHTML]="currentTestimonial.text"></p>
+  </div>
+  

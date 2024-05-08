@@ -91,7 +91,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/three/build/three.min.js"]
           }
         }
       }
