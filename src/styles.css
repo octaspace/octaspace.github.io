@@ -347,8 +347,15 @@ h3.section__title:before {
 .hero__content {
     position: relative;
     z-index: 1; /* Higher z-index than the image */
-}
-
+    opacity: 0; /* Initially set opacity to 0 */
+    transform: translateY(20px); /* Move content down by 20px */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Transition opacity and transform over 1 second with ease-in timing function */
+  }
+  
+  .fade-in {
+    opacity: 1; /* Set opacity to 1 to reveal the content */
+    transform: translateY(0); /* Move content back to its original position */
+  }
 
 @media (min-width: 992px) {
     .hero .container .row .hero__height {
@@ -1014,7 +1021,17 @@ footer:before {
     overflow: hidden;
     align-items: center;
     justify-content: center;
-}
+    opacity: 0; /* Initially set opacity to 0 */
+    transform: translateY(20px); /* Move content down by 20px */
+    transition: opacity 1s ease-in, transform 1s ease-in; /* Transition opacity and transform over 1 second with ease-in timing function */
+  }
+  
+  .fade-in {
+    opacity: 1; /* Set opacity to 1 to reveal the content */
+    transform: translateY(0); /* Move content back to its original position */
+  }
+  
+
 
 .glass p {
     margin-top: 4px;
@@ -1046,11 +1063,17 @@ footer:before {
     align-items: center;
     justify-content: center;
     position: relative;
+    opacity: 0; /* Initially set opacity to 0 */
+    transition: opacity 1s ease-in; /* Transition opacity over 1 second with ease-in timing function */
 }
 
 .glass-transparent p {
     margin-top: 4px;
 }
+
+.fade-in-glass-transparent {
+    opacity: 1; /* Set opacity to 1 to reveal the content */
+  }
 
 .glass-transparent::before {
     content: '';

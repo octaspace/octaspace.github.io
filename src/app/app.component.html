@@ -55,10 +55,10 @@
                   <svg-icon src="assets/img/cube.svg" [applyClass]="true"></svg-icon>
               </div>
               <div class="col-lg-12 hero__height justify-content-center d-flex align-items-center">
-                  <div class="text-center hero__content">
-                      <h1 class="hero__title color-white--primary fw-bold mb-3">Octa<span class="color-accent--third">.</span>Space</h1>
-                      <h3 class="hero__subtitle color-white--primary fw-light mb-5">Shaping the Future of Distributed Computing</h3>
-                  </div>
+                <div class="text-center hero__content" [ngClass]="{'fade-in': fadeInTextContent}">
+                  <h1 class="hero__title color-white--primary fw-bold mb-3">Octa<span class="color-accent--third">.</span>Space</h1>
+                  <h3 class="hero__subtitle color-white--primary fw-light mb-5">Shaping the Future of Distributed Computing</h3>
+                </div>
               </div>
           </div>
       </div>
@@ -90,9 +90,10 @@
                 </div>
                 <div class="col-lg-9 mb-4">
                   <div class="main-container">
-                    <div class="glass mt-8">
-                        <img src="assets/img/render2.png" alt="" class="render">
+                    <div class="glass mt-8" [ngClass]="{'fade-in': fadeInGlassContent}">
+                      <img src="assets/img/render2.png" alt="" class="render">
                     </div>
+                  
                 </div>
                 
                 </div>
@@ -101,7 +102,7 @@
                   <div class="col-lg-2">
                     <p class="section__text mb-4 mt-4 color-gray text-center"><b>Native add-on</b></p>
                     <div class="main-container">
-                      <div class="glass-transparent mt-8">
+                      <div class="glass-transparent mt-8" [ngClass]="{'fade-in-glass-transparent': fadeInGlassTransparentContent}">
                         <!-- Placeholder for the first column -->
                         <div class="render-mask">
                           <img src="assets/img/addon.png" alt="" class="image-transparent">
@@ -112,7 +113,7 @@
                   <div class="col-lg-5">
                     <p class="section__text mb-4 mt-4 color-gray text-center"><b>Render on your own terms, based on budget and needs</b></p>
                     <div class="main-container">
-                      <div class="glass-transparent mt-8">
+                      <div class="glass-transparent mt-8" [ngClass]="{'fade-in-glass-transparent': fadeInGlassTransparentContent}">
                         <!-- Placeholder for the second column -->
                         <div class="render-mask">
                           <img src="assets/img/scaling.png" alt="" class="image-transparent">
@@ -123,7 +124,7 @@
                   <div class="col-lg-5">
                     <p class="section__text mb-4 mt-4 color-gray text-center"><b>Dynamically scale real-time across hundreds of GPUs</b></p>
                     <div class="main-container">
-                      <div class="glass-transparent mt-8">
+                      <div class="glass-transparent mt-8" [ngClass]="{'fade-in-glass-transparent': fadeInGlassTransparentContent}">
                         <!-- Placeholder for the third column -->
                         <div class="render-mask">
                           <img src="assets/img/compute.png" alt="" class="image-transparent">
@@ -314,7 +315,7 @@
       <!-- First Row: AI Heading and Image -->
       <div class="row mb-4">
         <div class="col-lg-12">
-          <h2 class="section__title mb-4 fw-bold">AI</h2>
+          <h2 class="section__title mb-4 fw-bold" [ngClass]="{'fade-in': fadeInTextContent}">AI</h2>
         </div>
         
         <div class="col-lg-6 offset-lg-3 text-center background-with-svg">
