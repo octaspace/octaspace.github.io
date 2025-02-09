@@ -473,7 +473,7 @@ h4.section__title:before {
     height: 154px;
     min-width: 400px;
     max-width: 700px;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     gap: 16px;
     display: flex;

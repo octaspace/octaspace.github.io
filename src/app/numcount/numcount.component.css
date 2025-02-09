@@ -5,11 +5,11 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     gap: 8px;
   }
-  
+
   /* Gradient text effect for counters (bold & gradient) */
   .counter {
     font-size: 64px;
@@ -20,7 +20,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Make the text gradient */
   }
-  
+
   /* Style for the labels (Frames, Months worth of rendering) */
   .name {
     font-size: 24px;
@@ -29,16 +29,16 @@
     font-weight: 400;
     text-align: center;
   }
-  
+
   /* Add space between the two items */
   .row {
     display: flex;
     justify-content: space-between; /* Space out the columns */
     width: 100%;
   }
-  
+
   .col-md-6 {
     padding: 0 10px; /* Adds space between the columns */
     margin-bottom: 10px; /* Adds extra space below each item */
   }
-  
+
