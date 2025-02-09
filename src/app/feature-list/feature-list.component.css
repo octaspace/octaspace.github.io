@@ -1,0 +1,65 @@
+.container {
+  max-width: 800px;
+  position: relative;
+}
+
+/* Fading Effect at the Bottom */
+#iconGrid {
+  background-color: transparent;
+  position: relative;
+  overflow: hidden; /* Ensures the effect applies properly */
+}
+
+/* Icon Box Styling with No Rounded Corners and Bigger Size */
+.icon-box {
+  border-radius: 0px; /* Removed rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Smooth hover transition */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Ensure the content is centered */
+  text-align: center;
+  width: 100%;
+  max-width: 120px; /* Slightly wider width */
+  height: 130px; /* Slightly taller box */
+  box-sizing: border-box;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 10px; /* Added padding to prevent the text from touching the edges */
+  overflow: hidden; /* Ensures the text fits without spilling out */
+}
+
+/* Subtle Hover Effect with Light Shadow */
+.icon-box:hover {
+  background: rgba(255, 255, 255, 0.2); /* Slightly lighter background on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Larger Icon Image Styling */
+.icon-image {
+  width: 48px; /* Increased icon size */
+  height: 48px; /* Increased icon size */
+  object-fit: contain;
+  opacity: 0.9; /* Slight opacity for icons */
+  transition: opacity 0.2s ease-in-out; /* Smooth transition for hover */
+}
+
+/* Icon Image Hover Effect */
+.icon-box:hover .icon-image {
+  opacity: 1; /* Full opacity on hover */
+}
+
+/* Larger Label Styling with Text Wrapping */
+.icon-label {
+  font-size: 14px; /* Larger font size */
+  font-weight: 500;
+  color: #ffffff;
+  margin-top: 8px; /* More space between icon and label */
+  margin-bottom: 0; /* Remove any additional space below text */
+  white-space: normal; /* Allow text to wrap properly */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Truncate text if it's too long */
+  word-wrap: break-word; /* Allow long words to break into the next line */
+  line-height: 1.2; /* Adjust line height for better readability */
+}

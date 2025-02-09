@@ -1,0 +1,85 @@
+/* Container to limit the scroll width */
+.logo-container {
+    --logo-width: 100px; 
+    --logo-height: 40px; /* Reduced height of logos */
+    --gap: 80px;  /* Increased spacing between logos */
+    --duration: 60s;             
+    --scroll-start: 0;           
+    --scroll-end: calc(-100% - var(--gap)); 
+
+    display: flex;               
+    flex-direction: column;      
+    gap: var(--gap);             
+    margin: auto;                
+    max-width: 800vw;  /* Increased max-width for wider scroller */
+    padding: 0 5vw;  
+    overflow: hidden; 
+    height: 60px; /* Adjust the height of the scroller */
+}
+
+/* Scrolling area */
+.logo-scroll {
+    display: flex;               
+    overflow: hidden;            
+    user-select: none;           
+    gap: var(--gap); /* Apply increased spacing */
+    width: 100%;  
+    mask-image: linear-gradient(
+      to right,
+      hsl(0 0% 0% / 0),
+      hsl(0 0% 0% / 1) 10%,
+      hsl(0 0% 0% / 1) 90%,
+      hsl(0 0% 0% / 0)
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      hsl(0 0% 0% / 0),
+      hsl(0 0% 0% / 1) 10%,
+      hsl(0 0% 0% / 1) 90%,
+      hsl(0 0% 0% / 0)
+    );
+}
+
+/* Logo wrapper */
+.logo-scroll__wrapper {
+    flex-shrink: 0;              
+    display: flex;               
+    align-items: center;         
+    justify-content: space-around;
+    gap: var(--gap); /* Increased gap applied */
+    min-width: 100%;             
+    animation: scroll var(--duration) linear infinite;
+}
+
+/* Adjust offset for smooth scrolling */
+.logo-scroll__wrapper:nth-child(even) {
+    margin-left: calc(var(--logo-width) / -2); 
+}
+  
+/* Logo item styling */
+.logo-item {
+    width: var(--logo-width);    
+    height: var(--logo-height);  /* Reduced height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Transparent background */
+}
+  
+/* PNG logos: Apply filter to make them white */
+.logo-item img {
+    width: 100%;    
+    height: 100%;   
+    object-fit: contain; /* Ensures the logo retains aspect ratio */
+    filter: brightness(0) invert(1); /* Makes the logos white */
+}
+  
+/* Infinite scroll animation */
+@keyframes scroll {
+    from {
+        transform: translateX(var(--scroll-start)); 
+    }
+    to {
+        transform: translateX(var(--scroll-end)); 
+    }
+}

@@ -15,6 +15,9 @@ import { GlobeComponent } from './globe/globe.component';
 import { NumcountComponent } from './numcount/numcount.component';
 import { SvgAnimationsComponent } from './svg-animations/svg-animations.component';
 import { TestimonialSliderComponent } from './testimonial-slider/testimonial-slider.component';
+import { FeatureListComponent } from './feature-list/feature-list.component';
+import { MarqueeComponent } from './marquee/marquee.component';
+import { FeaturesComponent } from './features/features.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,9 @@ import { TestimonialSliderComponent } from './testimonial-slider/testimonial-sli
     NumcountComponent,
     SvgAnimationsComponent,
     TestimonialSliderComponent,
+    FeatureListComponent,
+    MarqueeComponent,
+    FeaturesComponent,
   ],
   imports: [
     BrowserModule,

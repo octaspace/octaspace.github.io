@@ -1,0 +1,73 @@
+/* General Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+  }
+  
+  .header {
+    text-align: center;
+  }
+  
+  .header h2 {
+    color: #ffffff;
+    font-family: "Satoshi Variable", Medium;
+    font-size: 64px;
+    font-weight: 500;
+  }
+  
+  .header p {
+    color: #dcdcdc;
+    font-family: "Satoshi Variable", Medium;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .feature-cards {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .feature-card {
+    position: relative;
+    width: 448px;
+    height: 300px;
+    background-color: #0b0a0b;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  
+  .feature-card svg {
+    width: 100%;
+    height: auto;
+  }
+  
+  .feature-text {
+    padding: 16px;
+    color: #dcdcdc;
+  }
+  
+  .feature-text .date {
+    font-family: "Satoshi Variable", Bold;
+    font-size: 32px;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .feature-text h3 {
+    font-family: "Satoshi Variable", Medium;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .feature-text .description {
+    font-family: "Satoshi Variable", Medium;
+    font-size: 16px;
+    text-align: left;
+    font-weight: 500;
+  }
+  
