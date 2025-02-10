@@ -182,7 +182,7 @@
   font-weight: bold;
   color: white;
   position: relative;
-  margin-left: 50px; /* Ensures text starts beside the icon */
+  margin-left: 65px; /* Ensures text starts beside the icon */
   transition: color 0.4s ease-in-out;
   z-index: 2;
 }

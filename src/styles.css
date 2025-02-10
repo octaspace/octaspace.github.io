@@ -1522,6 +1522,11 @@ footer:before {
   justify-content: flex-start;
   margin-top: 20px;
 }
+.button-wrapper2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 
 /* Button container */
 .btn {
