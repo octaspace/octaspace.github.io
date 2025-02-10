@@ -30,9 +30,6 @@
                         <a class="nav-link color-white--secondary" href="https://whitepaper.octa.space">WhitePaper</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link color-white--secondary" href="#team">Leadership</a>
-                      </li>
-                      <li class="nav-item">
                         <a class="nav-link color-white--secondary" href="#links">Links</a>
                       </li>
                       <li class="nav-item d-lg-none mt-30">
@@ -54,7 +51,7 @@
               <div class="col-lg-12 hero__height justify-content-center d-flex align-items-center">
                 <div class="text-center hero__content" [ngClass]="{'fade-in': fadeInTextContent}">
                   <h1 class="hero__title color-white--primary fw-bold mb-3">Octa<span class="color-accent--third">.</span>Space</h1>
-                  <h3 class="hero__subtitle color-white--primary fw-light mb-5">Shaping the Future of Distributed Computing</h3>
+                  <h3 class="hero__subtitle color-white--primary fw-bold mb-5">Shaping the Future of Distributed Computing</h3>
                 </div>
               </div>
           </div>
@@ -67,71 +64,16 @@
       <div class="container">
 
         <section class="pb-60">
-          <h1 class="section__title pb-60 fw-bold">services</h1>
+          <h2 class="section__title text-center pb-60 fw-bold">Ready-to-launch distributed computing solutions</h2>
           <div class="container">
               <div class="row">
-                <div class="col-lg-3 mb-4">
-                  <h2 class="section__title mb-30 fw-bold">Rendering</h2>
-                  <p class="section__text mb-45 color-gray">
-                    Octa<b>Render</b> is a cutting-edge distributed rendering platform, leveraging our global network of nodes and packed with a plethora of features, supporting multiple rendering engines. It delivers lightning-fast renders with simplicity in mind.
-                  </p>
-                  <p class="section__text mb-45 color-gray">Octa<b>Render</b> supports both GPU and CPU rendering</p>
-                  <div class="button-group">
-                    <a href="https://render.octa.space/" class="btn-primary mb-3 mb-sm-0 me-0 me-sm-3">Render Portal</a>
-                  </div>
-                  <div class="links mt-4 mb-4">
-                  <div class="links__item">
-                    <a href="https://docs.octa.space/rendering"><span>Documentation</span> <svg class="links__arrow" width="33" height="12" viewBox="0 0 33 12" fill="none"><path d="M16.9984 6L6.99841 0.226497V11.7735L16.9984 6ZM0.998413 7H7.99841V5H0.998413V7Z" fill="#C31A98"/></svg></a>
-                  </div>
-                </div>
-                </div>
-                <div class="col-lg-9 mb-4">
+                <div class="col-lg-12 mb-4">
                   <div class="main-container">
                     <div class="glass mt-8" [ngClass]="{'fade-in': fadeInGlassContent}">
                       <img src="assets/img/render2.png" alt="" class="render">
                     </div>
-
-                </div>
-
-                </div>
-
-                <div class="row">
-                  <div class="col-lg-2">
-                    <p class="section__text mb-4 mt-4 color-gray text-center"><b>Native add-on</b></p>
-                    <div class="main-container">
-                      <div class="glass-transparent mt-8" [ngClass]="{'fade-in-glass-transparent': fadeInGlassTransparentContent}">
-                        <!-- Placeholder for the first column -->
-                        <div class="render-mask">
-                          <img src="assets/img/addon.png" alt="" class="image-transparent">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-5">
-                    <p class="section__text mb-4 mt-4 color-gray text-center"><b>Render on your own terms, based on budget and needs</b></p>
-                    <div class="main-container">
-                      <div class="glass-transparent mt-8" [ngClass]="{'fade-in-glass-transparent': fadeInGlassTransparentContent}">
-                        <!-- Placeholder for the second column -->
-                        <div class="render-mask">
-                          <img src="assets/img/scaling.png" alt="" class="image-transparent">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-5">
-                    <p class="section__text mb-4 mt-4 color-gray text-center"><b>Dynamically scale real-time across hundreds of GPUs</b></p>
-                    <div class="main-container">
-                      <div class="glass-transparent mt-8" [ngClass]="{'fade-in-glass-transparent': fadeInGlassTransparentContent}">
-                        <!-- Placeholder for the third column -->
-                        <div class="render-mask">
-                          <img src="assets/img/compute.png" alt="" class="image-transparent">
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
-
-
 
 
                   <div class="row mt-5">
@@ -140,37 +82,245 @@
                     </div>
                   </div>
                   <div class="row">
-                  <app-numcount></app-numcount>
+                    <app-numcount [network]="network"></app-numcount>
                 </div>
                 <div class="row mt-4">
                   <div class="col-lg-12 text-center">
-                     <h3 class="section__title mb-3">Projects Rendered For</h3>
+                     <h4 class="section__title">Projects rendered for</h4>
                     &nbsp;
                   </div>
                 </div>
+                <div class="row justify-content-center ">
+                  <div class="col-lg-12">
+                  <!-- app.component.html -->
+<app-marquee
+[logos]="[
+  { src: 'assets/img/logos/Coca-Cola_logo.png', alt: 'Coca Cola' },
+  { src: 'assets/img/logos/BMWasia.png', alt: 'BMW Motorrad' },
+  { src: 'assets/img/logos/bungie_logo.png', alt: 'Bungie' },
+  { src: 'assets/img/logos/rokoko.png', alt: 'Rokoko' },
+  { src: 'assets/img/logos/800px-Destiny_2_logo.png', alt: 'Destiny' },
+  { src: 'assets/img/logos/sparrow.png', alt: 'Sparrow Films' },
+  { src: 'assets/img/logos/sodacity.png', alt: 'Soda City Films' },
+  { src: 'assets/img/logos/RnRAnim.png', alt: 'RnR Animation' },
+  { src: 'assets/img/logos/pera.png', alt: 'Pera Algo' }
+]"
+[animationDuration]="'90s'">
+</app-marquee>
+</div>
 
-                <div class="row justify-content-center">
-                  <div class="col-lg-8 text-center">
-                    <div class="clients d-flex justify-content-center flex-wrap">
-                      <div class="logo-container">
-                        <a href="#" class="logo-link"><img src="assets/img/logos/Coca-Cola_logo.png" alt="Coca Cola"></a>
+
+</div>
+
+
+
+              </div>
+
+
+          </div>
+      </section>
+                <div class="row mb-45 mt-40">
+                  <div class="row mt-5">
+                    <div class="col-lg-12 ">
+
+
+                    </div>
+
+                  </div>
+                  <div class="col-lg-4">
+
+                    <h2 class="section__title mb-45 fw-bold">OctaRender</h2>
+                    <p class="section__text mb-45 color-gray">
+                      Octa<b>Render</b> is a cutting-edge distributed rendering platform, leveraging our global network of nodes and packed with a plethora of features, supporting multiple rendering engines. It delivers lightning-fast renders with simplicity in mind.
+                    </p>
+                      <div class="button-group">
+                        <a href="https://render.octa.space/" class="btn-primary mb-3 mb-sm-0 me-0 me-sm-3">Render Portal</a>
                       </div>
-                      <div class="logo-container">
-                        <a href="https://www.bungie.net/" class="logo-link"><img src="assets/img/logos/bungie_logo.png" alt="Bungie"></a>
-                      </div>
-                      <div class="logo-container">
-                        <a href="https://www.rokoko.com/" class="logo-link"><img src="assets/img/logos/rokoko.png" alt="Rokoko"></a>
-                      </div>
-                      <div class="logo-container">
-                        <a href="https://www.bungie.net/7/en/Destiny" class="logo-link"><img src="assets/img/logos/destiny-logo.png" alt="Rokoko"></a>
+                    <div class="links mt-4 mb-4"></div>
+                  </div>
+                  <div class="col-lg-8">
+
+                    <div class="main-container">
+                      <div class="glass mt-8" [ngClass]="{'fade-in': fadeInGlassContent}">
+                        <!-- Placeholder for the third column -->
+                        <img src="assets/img/render.png" alt="" class="render">
+
+
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-          </div>
-      </section>
+
+      <section class="pb-45 mt-180 overflow-x-clip">
+
+        <div class="container">
+
+          <section class="pb-60">
+            <div class="container">
+                <div class="row">
+                  <h2 class="section__title mb-45 fw-bold">Marketplace</h2>
+                  <div class="col-lg-12 mb-4">
+                    <div class="main-container">
+                      <div class="glass mt-8" [ngClass]="{'fade-in': fadeInGlassContent}">
+                        <img src="assets/img/nodes2.png" alt="" class="render">
+                      </div>
+                  </div>
+
+
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12 mt-30 text-center">
+                      <p class="section__text mb-45 color-gray">
+                        OctaSpace operates a decentralized computing marketplace where users can offer hardware for rental in the form of nodes, with providers setting custom pricing based on hardware configuration.
+
+                        This decentralized approach creates a dynamic and competitive ecosystem, promoting the democratization of computing and encouraging competitive pricing.                      </p>
+                    </div>
+                    <div class="logo-container">
+                      <img src="assets/img/logos/intel.svg" alt="Logo 1" class="logo">
+                      <img src="assets/img/logos/nvidia.svg" alt="Logo 2" class="logo">
+                      <img src="assets/img/logos/amd.svg" alt="Logo 3" class="logo">
+                    </div>
+                    <div class="col-lg-12 mt-30 text-center">
+                      <p class="section__text mb-45 color-gray">
+                        OctaSpace supports and provides a wide range of hardware, including both CPUs and GPUs from major manufacturers. Nodes can range from server-grade multi-GPU configurations for heavy compute tasks to Raspberry Pi’s serving as VPN exit nodes.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="row mt-40">
+                    <!-- Left Column -->
+                    <div class="col-lg-5 mt-100">
+                      <h3>Dedicated compute resources</h3>
+                      <p class="section__text mb-45 color-gray">
+                        When a user rents a node from the marketplace, they are allocated all of the node’s resources, including CPU, RAM, GPU(s), and storage.
+                      </p>
+                      <div class="main-container">
+
+                        <div class="glass-transparent mt-8" [ngClass]="{'fade-in-glass-transparent': fadeInGlassTransparentContent}">
+                          <img src="assets/img/architecture.png" alt="" class="render">
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Vertical Line -->
+                    <div class="col-lg-2 d-flex align-items-center justify-content-center">
+                      <div class="vertical-line"></div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="col-lg-5">
+                       <app-feature-list></app-feature-list>
+                       <div class="button-group mt-45">
+                        <a href="https://marketplace.octa.space/" class="btn-primary mb-3 mb-sm-0 me-0 me-sm-3">Get started</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container">
+                    <!-- First Row: AI Heading and Image -->
+                    <div class="row mt-100 mb-4">
+
+
+                      <div class="col-lg-6 offset-lg-3 text-center background-with-svg">
+                        <app-svg-animations></app-svg-animations>
+                      </div>
+                    </div>
+
+                    <!-- Second Row: AI Paragraph -->
+                    <div class="row mb-4">
+                      <div class="col-lg-8 offset-lg-2">
+                        <h3 class="section__title text-center mb-3">Develop & train models and launch AI applications</h3>
+                      </div>
+                    </div>
+
+                    <!-- Third Row: Three Columns with Images -->
+                    <div class="row">
+                      <div class="col-lg-4">
+
+                        <div class="col-lg-2 col-md-4 col-6 d-flex justify-content-center">
+
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-6 d-flex justify-content-center">
+                          <div class="text-center">
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-160">
+                    <div class="col-lg-12">
+                      <h2 class="section__title mb-45 fw-bold">Available resources</h2>
+                      <p class="section__text mb-45 color-gray">
+          OctaSpace provides an extensive array of services, giving users the flexibility to rent resources from a diverse network of nodes located worldwide.
+          These services encompass a wide spectrum of capabilities, including but not limited to disk space for ML tasks, AI Tools, image processing, and rendering scenes using Blender, among others.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+
+                    <div class="col-xl-3 col-md-6 mb-3 mb-xl-0 d-flex justify-content-center">
+                      <div class="card">
+                        <div class="card__icon">
+                          <img src="assets/img/icons/cpu.png" alt="">
+                        </div>
+                        <div class="card__top-text">
+                          {{ network?.power?.cpus }}
+                        </div>
+                        <div class="card__bottom-text">
+                          CPU
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 mb-3 mb-xl-0  d-flex justify-content-center">
+                      <div class="card">
+                        <div class="card__icon">
+                          <img src="assets/img/icons/gpu.png" alt="">
+                        </div>
+                        <div class="card__top-text">
+                          {{ network?.power?.gpus }}
+                        </div>
+                        <div class="card__bottom-text">
+                          GPU
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 mb-3 mb-xl-0  d-flex justify-content-center">
+                      <div class="card">
+                        <div class="card__icon">
+                          <img src="assets/img/icons/ram.png" alt="">
+                        </div>
+                        <div class="card__top-text">
+                          {{ network?.power?.mem / 1073741824 / 1024 | number: '.0-0' }} <span>Tb</span>
+                        </div>
+                        <div class="card__bottom-text">
+                          RAM
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 d-flex justify-content-center">
+                      <div class="card">
+                        <div class="card__icon">
+                          <img src="assets/img/icons/disk.png" alt="">
+                        </div>
+                        <div class="card__top-text">
+                          {{ network?.power?.disk / 1073741824 / 1024 | number: '.0-1' }} <span>Tb</span>
+                        </div>
+                        <div class="card__bottom-text">
+                          DISK
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+            </div>
+        </section>
+
       <section class="pb-60 mt-160">
         <div class="container">
         <div class="row align-items-end mb-45 comet-holder">
@@ -207,7 +357,7 @@
               <img src="assets/img/icons/vpn.png" alt="">
             </div>
             <div class="card__top-text">
-              {{ network.nodes.vpn }}
+              {{ network?.nodes?.vpn }}
             </div>
             <div class="card__bottom-text">
               VPN AP
@@ -301,50 +451,14 @@
               <div><img src="assets/img/flags/vietnam.png" alt=""><span class="fs-6 fw-semibold ms-3 d-inline-block align-bottom">Vietnam</span></div>
               <div><img src="assets/img/flags/australia.png" alt=""><span class="fs-6 fw-semibold ms-3 d-inline-block align-bottom">Australia</span></div>
             </div>
-
           </div>
+
         </div>
 
       </div>
     </section>
+
     <section class="pb-60 mt-160">
-    <div class="container">
-      <!-- First Row: AI Heading and Image -->
-      <div class="row mb-4">
-        <div class="col-lg-12">
-          <h2 class="section__title mb-4 fw-bold" [ngClass]="{'fade-in': fadeInTextContent}">AI</h2>
-        </div>
-
-        <div class="col-lg-6 offset-lg-3 text-center background-with-svg">
-          <app-svg-animations></app-svg-animations>
-        </div>
-      </div>
-
-      <!-- Second Row: AI Paragraph -->
-      <div class="row mb-4">
-        <div class="col-lg-8 offset-lg-2">
-          <h3 class="section__title text-center mb-3">develop & train models and launch AI applications</h3>
-        </div>
-      </div>
-
-      <!-- Third Row: Three Columns with Images -->
-      <div class="row">
-        <div class="col-lg-4">
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex justify-content-center">
-
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 d-flex justify-content-center">
-            <div class="text-center">
-
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-
-        </div>
-      </div>
-    </div>
 
 
     <section class="pb-60 mt-160">
@@ -368,119 +482,14 @@
 
     <section class="pt-60 pb-60">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h1 class="section__title mb-30 fw-bold">available resources</h1>
-            <p class="section__text mb-45 color-gray">
-OctaSpace provides an extensive array of services, giving users the flexibility to rent resources from a diverse network of nodes located worldwide.
-These services encompass a wide spectrum of capabilities, including but not limited to disk space for ML tasks, AI Tools, image processing, and rendering scenes using Blender, among others.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-
-          <div class="col-xl-3 col-md-6 mb-3 mb-xl-0 d-flex justify-content-center">
-            <div class="card">
-              <div class="card__icon">
-                <img src="assets/img/icons/cpu.png" alt="">
-              </div>
-              <div class="card__top-text">
-                {{ network.power.cpus }}
-              </div>
-              <div class="card__bottom-text">
-                CPU
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-md-6 mb-3 mb-xl-0  d-flex justify-content-center">
-            <div class="card">
-              <div class="card__icon">
-                <img src="assets/img/icons/gpu.png" alt="">
-              </div>
-              <div class="card__top-text">
-                {{ network.power.gpus }}
-              </div>
-              <div class="card__bottom-text">
-                GPU
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-md-6 mb-3 mb-xl-0  d-flex justify-content-center">
-            <div class="card">
-              <div class="card__icon">
-                <img src="assets/img/icons/ram.png" alt="">
-              </div>
-              <div class="card__top-text">
-                {{ network.power.mem / 1073741824 | number: '.0-0' }} <span>Gb</span>
-              </div>
-              <div class="card__bottom-text">
-                RAM
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-md-6 d-flex justify-content-center">
-            <div class="card">
-              <div class="card__icon">
-                <img src="assets/img/icons/disk.png" alt="">
-              </div>
-              <div class="card__top-text">
-                {{ network.power.disk / 1073741824 / 1024 | number: '.0-1' }} <span>Tb</span>
-              </div>
-              <div class="card__bottom-text">
-                DISK
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="row mt-45">
-          <div class="col-lg-6">
-            <h2 class="section__title mb-36">available images</h2>
-          </div>
         </div>
+
         <div class="row">
-          <div class="col-lg-2 col-md-4 col-6 d-flex justify-content-center">
-            <div class="text-center">
-              <img src="assets/img/logos/ubuntu.svg" alt="">
-              <p class="mt-4">Ubuntu</p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 d-flex justify-content-center">
-            <div class="text-center">
-              <img src="assets/img/logos/jupyter.svg" alt="">
-              <p class="mt-4">Jupyter Notebook</p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 d-flex justify-content-center">
-            <div class="text-center">
-              <img src="assets/img/logos/blender.svg" alt="">
-              <p class="mt-4">Blender</p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 d-flex justify-content-center">
-            <div class="text-center">
-              <img src="assets/img/logos/hashcat.svg" alt="">
-              <p class="mt-4">Hashcat</p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 d-flex justify-content-center">
-            <div class="text-center">
-              <img src="assets/img/logos/tensorflow.svg" alt="">
-              <p class="mt-4">TensorFlow</p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-6 d-flex justify-content-center">
-            <div class="text-center">
-              <img src="assets/img/logos/pytorch.svg" alt="">
-              <p class="mt-4">PyTorch</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <h1 class="section__title mb-30 fw-bold">network</h1>
+          <div class="col-lg-12">
+            <h2 class="section__title mb-30 fw-bold">Network</h2>
             <p class="section__text color-gray mb-45 color-gray">
 OctaSpace operates on its own Layer 1 native EVM-compatible blockchain.
-This blockchain employs a dual-chain system, combining Proof-of-Work (PoW) and Proof-of-Authority (PoA) consensus mechanisms.
             </p>
           </div>
         </div>
@@ -491,7 +500,7 @@ This blockchain employs a dual-chain system, combining Proof-of-Work (PoW) and P
                 Nodes
               </span>
               <span class="info__bottom">
-                {{ network.nodes.count }}
+                {{ network?.nodes?.count }}
               </span>
             </div>
           </div>
@@ -501,7 +510,7 @@ This blockchain employs a dual-chain system, combining Proof-of-Work (PoW) and P
                 Hashrate
               </span>
               <span class="info__bottom">
-                {{ network.blockchain.hashrate / 1024 / 1024 / 1024 | number: '.0-2'}} <span>Gh/s</span>
+                {{ network?.blockchain?.hashrate / 1024 / 1024 / 1024 / 1024 | number: '.0-2'}} <span>Th/s</span>
               </span>
             </div>
           </div>
@@ -511,7 +520,7 @@ This blockchain employs a dual-chain system, combining Proof-of-Work (PoW) and P
                 Height
               </span>
               <span class="info__bottom">
-                {{ network.blockchain.height }}
+                {{ network?.blockchain?.height }}
               </span>
             </div>
           </div>
@@ -521,46 +530,50 @@ This blockchain employs a dual-chain system, combining Proof-of-Work (PoW) and P
                 Era
               </span>
               <span class="info__bottom">
-                {{ network.blockchain.era }}
+                {{ network?.blockchain?.era }}
               </span>
             </div>
           </div>
         </div>
         <div class="row mb-45">
           <div class="col-xxl-3 col-lg-5">
-            <div class="info">
+ <!--           <div class="info">
               <span class="info__top">
                 Staked
               </span>
               <span class="info__bottom">
                 {{ network.staked }} <span>OCTA</span>
               </span>
-            </div>
+            </div>-->
           </div>
+          <!--
           <div class="col-xxl-2 col-lg-3">
             <div class="info">
               <span class="info__top">
                 Block time
               </span>
               <span class="info__bottom">
-                {{ network.blockchain.blocktime }} <span>sec</span>
+                {{ network?.blockchain?.blocktime }} <span>sec</span>
               </span>
             </div>
           </div>
+          -->
         </div>
       </div>
     </section>
 
 
     <!-- <app-roadmap></app-roadmap> -->
+     <!--
     <app-team></app-team>
+  -->
 
 
     <section class="pt-60 pb-45">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <h1 class="section__title fw-bold mb-36" id="links">links</h1>
+            <h2 class="section__title fw-bold mb-36" id="links">Links</h2>
           </div>
         </div>
         <div class="row mb-45">
@@ -582,10 +595,13 @@ This blockchain employs a dual-chain system, combining Proof-of-Work (PoW) and P
                 <a href="https://www.reddit.com/r/octaspace/"><span>Reddit</span> <svg class="links__arrow" width="33" height="12" viewBox="0 0 33 12" fill="none"><path d="M16.9984 6L6.99841 0.226497V11.7735L16.9984 6ZM0.998413 7H7.99841V5H0.998413V7Z" fill="#C31A98"/></svg></a>
               </div>
               <div class="links__item">
-                <a href="https://bitcointalk.org/index.php?topic=5224155.0"><span>Bitcointalk</span> <svg class="links__arrow" width="33" height="12" viewBox="0 0 33 12" fill="none"><path d="M16.9984 6L6.99841 0.226497V11.7735L16.9984 6ZM0.998413 7H7.99841V5H0.998413V7Z" fill="#C31A98"/></svg></a>
+                <a href="https://www.youtube.com/@octa_space"><span>Youtube</span> <svg class="links__arrow" width="33" height="12" viewBox="0 0 33 12" fill="none"><path d="M16.9984 6L6.99841 0.226497V11.7735L16.9984 6ZM0.998413 7H7.99841V5H0.998413V7Z" fill="#C31A98"/></svg></a>
               </div>
               <div class="links__item">
-                <a href="https://www.youtube.com/@octa_space"><span>Youtube</span> <svg class="links__arrow" width="33" height="12" viewBox="0 0 33 12" fill="none"><path d="M16.9984 6L6.99841 0.226497V11.7735L16.9984 6ZM0.998413 7H7.99841V5H0.998413V7Z" fill="#C31A98"/></svg></a>
+                <a href="https://blog.octa.space"><span>Medium</span> <svg class="links__arrow" width="33" height="12" viewBox="0 0 33 12" fill="none"><path d="M16.9984 6L6.99841 0.226497V11.7735L16.9984 6ZM0.998413 7H7.99841V5H0.998413V7Z" fill="#C31A98"/></svg></a>
+              </div>
+              <div class="links__item">
+                <a href="https://www.instagram.com/octaspace.official"><span>Instagram</span> <svg class="links__arrow" width="33" height="12" viewBox="0 0 33 12" fill="none"><path d="M16.9984 6L6.99841 0.226497V11.7735L16.9984 6ZM0.998413 7H7.99841V5H0.998413V7Z" fill="#C31A98"/></svg></a>
               </div>
             </div>
           </div>
@@ -597,6 +613,9 @@ This blockchain employs a dual-chain system, combining Proof-of-Work (PoW) and P
         </div>
         <div class="row mb-45">
           <div class="col-12 d-flex justify-content-start align-items-center flex-wrap logos-group">
+            <a href="https://www.gate.io/trade/OCTA_USDT" class="me-5">
+              <img src="assets/img/logos/gate.svg" alt="gate.io">
+            </a>
             <a href="https://www.mexc.com/exchange/OCTA_USDT" class="me-5">
               <img src="assets/img/logos/mexc.svg" alt="mexc">
             </a>
@@ -606,11 +625,8 @@ This blockchain employs a dual-chain system, combining Proof-of-Work (PoW) and P
             <a href="https://www.coinex.com/exchange/OCTA-USDT" class="me-5">
               <img src="assets/img/logos/coinex.png" alt="coinex">
             </a>
-            <a href="https://safe.trade/trading/octausdt" class="me-5">
-              <img src="assets/img/logos/safe-trade.png" alt="safe trade">
-            </a>
-            <a href="https://xeggex.com/market/OCTA_USDT" class="">
-              <img src="assets/img/logos/xeggex.png" alt="xeggex">
+            <a href="https://www.biconomy.com/exchange/OCTA_USDT" class="me-5">
+              <img src="assets/img/logos/Biconomy.com logo white.svg" alt="biconomy">
             </a>
           </div>
         </div>
@@ -618,9 +634,9 @@ This blockchain employs a dual-chain system, combining Proof-of-Work (PoW) and P
       </div>
     </section>
 
-
+<!--
     <app-partners></app-partners>
-
+-->
     <footer class="pt-4 pb-4 text-center">
       <span>&copy; 2022-{{ currentYear }} All rights reserved by OctaSpace</span>
     </footer>

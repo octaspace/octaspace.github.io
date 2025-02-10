@@ -1,45 +1,20 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-numcount',
   templateUrl: './numcount.component.html',
   styleUrls: ['./numcount.component.css']
 })
-export class NumcountComponent implements OnInit {
+export class NumcountComponent implements OnInit, OnChanges {
 
-  constructor(private el: ElementRef) { }
+  @Input() network: any;  
+  framesTotal: number = 0;
 
-  ngOnInit(): void {
-    this.counter('.counter1', 2);
-    this.counter('.counter2', 3);
-    this.counter('.counter3', 4);
-  }
+  ngOnInit(): void {}
 
-  private counter(className: string, duration: number): void {
-    const target = this.el.nativeElement.querySelector(className);
-
-    if (!target) {
-      console.error(`Element with class '${className}' not found.`);
-      return;
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['network'] && this.network?.render?.frames_total !== undefined) {
+      this.framesTotal = this.network.render.frames_total;
     }
-
-    const end = parseInt(target.getAttribute('data-target') || '0', 10);
-    let current = 0;
-
-    const interval = setInterval(() => {
-      if (current < end) {
-        current += Math.ceil((end - current) / (duration * 10));
-        target.innerText = this.formatNumberWithCommas(current);
-      }
-      if (current >= end) {
-        clearInterval(interval);
-        target.innerText = this.formatNumberWithCommas(end);
-      }
-    }, 50);
   }
-
-  private formatNumberWithCommas(number: number): string {
-    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  }
-
 }

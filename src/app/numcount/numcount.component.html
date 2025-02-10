@@ -1,31 +1,25 @@
 <div class="container">
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <div class="item text-center">
-          <span class="info__bottom">
-            <p class="counter counter1" data-target="1200">00</p>
-          </span>
-          <div class="name color-gray">Renders</div>
-        </div>
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <div class="item text-center">
+        <span class="info__bottom">
+          <p class="counter">
+            {{ ((network?.render?.frames_total || 0) + 866534) | number }}
+          </p>
+        </span>
+        <div class="name">Frames</div>
       </div>
-  
-      <div class="col-md-4 mb-4">
-        <div class="item text-center">
-          <span class="info__bottom">
-            <p class="counter counter2" data-target="500000">00</p>
-          </span>
-          <div class="name color-gray">Frames</div>
-        </div>
-      </div>
-  
-      <div class="col-md-4 mb-4">
-        <div class="item text-center">
-          <span class="info__bottom">
-            <p class="counter counter3" data-target="17000">00</p>
-          </span>
-          <div class="name color-gray">Tasks per second</div>
-        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="item text-center">
+        <span class="info__bottom">
+          <p class="counter">
+            {{ ((network?.render?.duration_seconds || 0) / 2592000) | number:'1.0-2' }}
+          </p>
+        </span>
+        <div class="name">Months worth of rendering</div>
       </div>
     </div>
   </div>
-  
+</div>

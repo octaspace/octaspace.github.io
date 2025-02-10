@@ -10,6 +10,6 @@ export class NetworkService {
   constructor(private http: HttpClient) { }
 
   getNetwork(): Observable<any> {
-    return this.http.get('https://api.octa.space/v1/network');
+    return this.http.get('https://api.octa.computer/network');
   }
 }

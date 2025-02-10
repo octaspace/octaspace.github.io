@@ -1,0 +1,14 @@
+<div class="logo-container">
+  <div class="logo-scroll" [style.animationDuration]="animationDuration">
+    <div class="logo-scroll__wrapper">
+      <div class="logo-item" *ngFor="let logo of logos">
+        <img [src]="logo.src" [alt]="logo.alt" />
+      </div>
+    </div>
+    <div class="logo-scroll__wrapper">
+      <div class="logo-item" *ngFor="let logo of logos">
+        <img [src]="logo.src" [alt]="logo.alt" />
+      </div>
+    </div>
+  </div>
+</div>
