@@ -4,23 +4,13 @@
 
   <!-- Icons Grid -->
   <div id="iconGrid" class="row g-3">
-    <div
-      *ngFor="let icon of icons; let i = index"
-      class="col-6 col-md-4 col-lg-3"
-      (click)="copyToClipboard(icon.name)"
-    >
-      <div class="icon-box text-center p-3" [ngStyle]="{ opacity: getIconOpacity(i) }">
-        <img [src]="icon.image" alt="{{ icon.name }}" class="icon-image mb-2" />
-        <span class="icon-label">{{ icon.name }}</span>
-        <span
-          *ngIf="icon.copied"
-          class="position-absolute top-0 end-0 m-2 badge bg-light text-dark"
-        >
-          Copied
-        </span>
-      </div>
+    <div *ngFor="let icon of icons; let i = index" class="col-6 col-md-4 col-lg-3">
+      <a href="https://marketplace.octa.space/" target="_blank" class="icon-link">
+        <div class="icon-box text-center p-3" [ngStyle]="{ opacity: getIconOpacity(i) }">
+          <img [src]="icon.image" alt="{{ icon.name }}" class="icon-image mb-2" />
+          <span class="icon-label">{{ icon.name }}</span>
+        </div>
+      </a>
     </div>
-
   </div>
-  
 </div>
