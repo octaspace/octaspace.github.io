@@ -70,9 +70,124 @@
   display: block; /* Make the whole area clickable */
 }
 .many-more-text {
+  text-align: center;
   font-size: 16px;
   font-weight: 600;
   color: #ffffff;
-  opacity: 0.8;
+  margin-top: 20px;
 }
 
+/* Centering the button */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Button container */
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 230px;
+  height: 50px;
+  background-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 25px;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Background overlay for hover effect */
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #C31A98;
+  border-radius: 25px;
+  left: 0;
+  transition: all 0.4s ease-in-out;
+  z-index: 1;
+}
+
+/* Expanding background effect */
+.btn:hover::before {
+  width: 100%;
+  border-radius: 25px; /* Ensures smooth expansion */
+}
+
+/* Button icon container */
+.btn-icons {
+  position: absolute;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  background-color: #C31A98; /* Ensures circle remains visible */
+  border-radius: 50%;
+  transition: background-color 0.4s ease-in-out;
+}
+
+/* Ensures the button bubble remains round */
+.btn:hover .btn-icons {
+  background-color: #C31A98;
+}
+
+/* Centering the arrows properly */
+.btn-icons i {
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease-in-out;
+}
+
+/* Default arrow */
+#angle {
+  color: white !important;
+  opacity: 1;
+}
+
+/* Hover state */
+.btn:hover #angle {
+  opacity: 0;
+  left: 120%;
+}
+
+/* Hover arrow */
+#arrow {
+  opacity: 0;
+  left: -20%;
+}
+
+/* Fix disappearing issue: Ensure arrow smoothly appears */
+.btn:hover #arrow {
+  opacity: 1;
+  color: black !important;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease-in-out 0.1s;
+}
+
+/* Button text */
+.btn-txt {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  margin-left: 50px; /* Ensures text starts beside the icon */
+  transition: color 0.4s ease-in-out;
+  z-index: 2;
+}
+
+/* Ensure text stays visible while background expands */
+.btn:hover .btn-txt {
+  color: black;
+}
