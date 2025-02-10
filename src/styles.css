@@ -456,7 +456,7 @@ h4.section__title:before {
     height: auto;
     color: #ffffff;
     font-size: 64px;
-    font-family: "Satoshi Variable", Bold; /* Ensures Satoshi Variable is used */
+    font-family: var(--font-secondary);
     font-weight: 900; /* Maximum weight for extra bold */
     text-align: center;
     vertical-align: top;
